@@ -6,20 +6,17 @@
 {% endblock %}
     
 
-{% block 'titulo' %}Cadastre-se{% endblock %}
+{% block 'titulo' %}Cadastre-sel{% endblock %}
 
 {% block 'body' %}
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 sidebar">
-                <div class="logo_sidebar">
-                    
+                <div class="logo_sidebar">                    
                     <h2 class="logo">
-                        <img class="img_logo_sidebar" src="">
+                        <img class="img_logo_sidebar" src="{% static 'autenticacao/img/logo_nutri_lab.png' %}">
                     </h2>
-
                 </div>
-
                 
             </div>
 
@@ -28,8 +25,8 @@
                     <h2 class="titulo">Seja bem vindo</h2>
                     <p class="sub-titulo">Crie sua conta</p>
                     <hr>
-                    
-                    <form action="" method="">
+                   
+                    <form action="{% url 'cadastro' %}" method="POST">                     
                         <span class="bold">Nome de usuário</span>
                         <input class="form-control input-form" name="usuario" type="text" placeholder="Digite seu nome...">
                         <br>
